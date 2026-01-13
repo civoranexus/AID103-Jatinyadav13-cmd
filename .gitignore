@@ -53,3 +53,19 @@ temp/
 # Package lock files (optional - uncomment if needed)
 # package-lock.json
 # yarn.lock
+
+# ================= ML FILES =================
+
+# Datasets (never push)
+ML_models/**/crop_cl_data/
+
+# Trained ML models
+*.keras
+*.h5
+*.pt
+*.onnx
+
+# Python cache
+__pycache__/
+.ipynb_checkpoints/
+
