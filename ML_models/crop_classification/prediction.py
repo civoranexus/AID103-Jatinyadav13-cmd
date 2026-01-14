@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing import image
 import os
 
 # ================= CONFIG =================
-MODEL_PATH = "model/crop_classifier.keras"
+MODEL_PATH = "model/crop_classifier_mobilenet.keras"
 IMG_SIZE = (224, 224)
 
 CLASS_NAMES = sorted(os.listdir("crop_cl_data/train"))
@@ -27,8 +27,9 @@ def predict_image(img_path):
 
 
 if __name__ == "__main__":
-    test_image = "sample.jpg"  # put any crop image here
+    # put any crop image here
+    test_image = "D:\\visual studio code\\civora\\AID103-Jatinyadav13-cmd\\ML_models\\crop_classification\\crop_cl_data\\test\\almond\\image (5).jpg"
     crop, conf = predict_image(test_image)
 
-    print(f"🌾 Predicted Crop: {crop}")
-    print(f"📊 Confidence: {conf:.2f}%")
+    print(f" Predicted Crop: {crop}")
+    print(f" Confidence: {conf:.2f}%")
